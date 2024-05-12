@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="it" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>moduli.FunzioniOrario &mdash; Orario Docenti 0.1 documentazione</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/fonts.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=41f723b1"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/translations.js?v=0173e136"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Indice" href="../../genindex.html" />
+    <link rel="search" title="Cerca" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Orario Docenti
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Cerca documenti" aria-label="Cerca documenti" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">SPHINX</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu navigazione dispositivi mobili" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Orario Docenti</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Naviga tra le pagine">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Codice del modulo</a></li>
+      <li class="breadcrumb-item active">moduli.FunzioniOrario</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Codice sorgente per moduli.FunzioniOrario</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">moduli.Impostazioni</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+
+<div class="viewcode-block" id="docenti_classe">
+<a class="viewcode-back" href="../../moduli.html#moduli.FunzioniOrario.docenti_classe">[documenti]</a>
+<span class="k">def</span> <span class="nf">docenti_classe</span><span class="p">(</span><span class="n">file_orario</span><span class="p">,</span> <span class="n">classe</span><span class="p">,</span> <span class="n">file_output</span><span class="p">):</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Scrive in un file l&#39;elenco dei docenti di una data classe</span>
+
+<span class="sd">    Primo parametro   - accetta in ingresso il percorso del file da analizzare</span>
+<span class="sd">    Secondo parametro - accetta in ingresso una classe dell&#39;orario</span>
+<span class="sd">	Terzo parametro   - accetta in ingresso il percorso del file in cui scrivere l&#39;elaborazione </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file_orario</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Errore: file inesistente</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">elenco_docenti</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">orario</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_orario</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+        <span class="n">file_output_aperto</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_output</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+        
+        <span class="n">riga</span> <span class="o">=</span> <span class="n">orario</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">riga</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+            <span class="n">riga</span> <span class="o">=</span> <span class="n">riga</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">SEPARATORE</span><span class="p">)</span> 
+            <span class="k">if</span> <span class="p">(</span><span class="n">classe</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="ow">in</span> <span class="n">riga</span><span class="p">):</span>
+                <span class="n">elenco_docenti</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">riga</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+            <span class="n">riga</span> <span class="o">=</span> <span class="n">orario</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#Lettura della riga successiva</span>
+        
+        <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">elenco_docenti</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;La classe inserita non è presente nell&#39;orario&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1">#scrittura nel file dei docenti</span>
+            <span class="k">for</span> <span class="n">docente</span> <span class="ow">in</span> <span class="n">elenco_docenti</span><span class="p">:</span>
+                <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">docente</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            
+        <span class="n">orario</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+        
+<div class="viewcode-block" id="conta_ore">
+<a class="viewcode-back" href="../../moduli.html#moduli.FunzioniOrario.conta_ore">[documenti]</a>
+<span class="k">def</span> <span class="nf">conta_ore</span><span class="p">(</span><span class="n">riga_file</span><span class="p">):</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Conta il numero di ore </span>
+
+<span class="sd">    Primo parametro - accetta in ingresso una riga del file già separata, depurata e inserita in una lista</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">conta_ore</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">ora</span> <span class="ow">in</span> <span class="n">riga_file</span><span class="p">:</span>
+        <span class="n">ora</span> <span class="o">=</span> <span class="n">ora</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="p">((</span><span class="n">ora</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">ora</span> <span class="o">!=</span> <span class="n">riga_file</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">and</span> <span class="p">(</span><span class="n">ora</span> <span class="o">!=</span> <span class="n">RICEVIMENTO</span><span class="p">)):</span> <span class="c1">#riga_file[0] = docente</span>
+            <span class="n">conta_ore</span> <span class="o">+=</span> <span class="mi">1</span>
+                
+    <span class="k">return</span> <span class="n">conta_ore</span> <span class="o">-</span> <span class="mi">1</span></div>
+
+    
+<div class="viewcode-block" id="orario_docente">
+<a class="viewcode-back" href="../../moduli.html#moduli.FunzioniOrario.orario_docente">[documenti]</a>
+<span class="k">def</span> <span class="nf">orario_docente</span><span class="p">(</span><span class="n">file_orario</span><span class="p">,</span> <span class="n">docente</span><span class="p">,</span> <span class="n">file_output</span><span class="p">):</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Scrive in un file l&#39;orario di un determinato docente e numero totale delle ore del docente</span>
+
+<span class="sd">    Primo parametro   - accetta in ingresso il percorso del file da analizzare</span>
+<span class="sd">    Secondo parametro - accetta in ingresso un docente dell&#39;orario</span>
+<span class="sd">	Terzo parametro   - accetta in ingresso il percorso del file in cui scrivere l&#39;elaborazione</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file_orario</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Errore: file inesistente</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">orario</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_orario</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+        <span class="n">file_output_aperto</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_output</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+        <span class="n">orario</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span> <span class="c1">#Lettura della prima riga di intestazione</span>
+        <span class="n">orario</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span> <span class="c1">#Lettura della seconda riga di intestazione</span>
+        <span class="n">riga</span> <span class="o">=</span> <span class="n">orario</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#Lettura del primo docente</span>
+        
+        <span class="k">while</span> <span class="p">(</span><span class="n">riga</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+            <span class="n">riga</span> <span class="o">=</span> <span class="n">riga</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">SEPARATORE</span><span class="p">)</span> <span class="c1">#Creazione di una lista contente ogni ora della settimana</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">riga</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="n">docente</span><span class="o">.</span><span class="n">upper</span><span class="p">()):</span>
+                <span class="n">ore_docente</span> <span class="o">=</span> <span class="n">conta_ore</span><span class="p">(</span><span class="n">riga</span><span class="p">)</span>
+                
+                <span class="c1">#Scrittura nel file dell&#39;orario</span>
+                <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Orario di: &quot;</span> <span class="o">+</span> <span class="n">docente</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">giorno</span> <span class="ow">in</span> <span class="n">SETTIMANA</span><span class="p">:</span>
+                    <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">giorno</span><span class="p">)</span>
+                <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ORE</span><span class="p">)):</span>
+                    <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">ORE</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">riga</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;  &quot;</span> <span class="o">+</span> <span class="n">riga</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">9</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;  &quot;</span> <span class="o">+</span> <span class="n">riga</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">17</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;  &quot;</span> <span class="o">+</span> <span class="n">riga</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">25</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;  &quot;</span> <span class="o">+</span> <span class="n">riga</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">33</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Le ore totale di lezione (SENZA RICEVIMENTI) di &quot;</span> <span class="o">+</span> <span class="n">docente</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; sono: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ore_docente</span><span class="p">))</span>
+               
+            <span class="n">riga</span> <span class="o">=</span> <span class="n">orario</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#Lettura della riga successiva</span>
+            
+        <span class="n">orario</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+        
+<div class="viewcode-block" id="ore_diposizione">
+<a class="viewcode-back" href="../../moduli.html#moduli.FunzioniOrario.ore_diposizione">[documenti]</a>
+<span class="k">def</span> <span class="nf">ore_diposizione</span><span class="p">(</span><span class="n">file_orario</span><span class="p">,</span> <span class="n">docente</span><span class="p">,</span> <span class="n">file_output</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Scrive in un file le ore a disposizione di un determinato docente</span>
+
+<span class="sd">    Primo parametro   - accetta in ingresso il percorso del file da analizzare</span>
+<span class="sd">    Secondo parametro - accetta in ingresso un docente dell&#39;orario</span>
+<span class="sd">	Terzo parametro   - accetta in ingresso il percorso del file in cui scrivere l&#39;elaborazione</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file_orario</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Errore: file inesistente</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">conta_disposizione</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">orario</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_orario</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+        <span class="n">file_output_aperto</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_output</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+        <span class="n">riga</span> <span class="o">=</span> <span class="n">orario</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">riga</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+            <span class="n">riga</span> <span class="o">=</span> <span class="n">riga</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">SEPARATORE</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">docente</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="n">riga</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()):</span>
+                <span class="k">for</span> <span class="n">ora</span> <span class="ow">in</span> <span class="n">riga</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">DISPOSIZIONE</span> <span class="o">==</span> <span class="n">ora</span><span class="o">.</span><span class="n">strip</span><span class="p">()):</span>
+                        <span class="n">conta_disposizione</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">riga</span> <span class="o">=</span> <span class="n">orario</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#Lettura della riga successiva</span>
+            
+        <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Il docente &quot;</span> <span class="o">+</span> <span class="n">docente</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; ha &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">conta_disposizione</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; ore di disposizione&quot;</span><span class="p">)</span>
+        
+        <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">orario</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="ore_disponibile">
+<a class="viewcode-back" href="../../moduli.html#moduli.FunzioniOrario.ore_disponibile">[documenti]</a>
+<span class="k">def</span> <span class="nf">ore_disponibile</span><span class="p">(</span><span class="n">file_orario</span><span class="p">,</span> <span class="n">ora</span><span class="p">,</span> <span class="n">giorno</span><span class="p">,</span> <span class="n">file_output</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Scrive in un file l&#39;elenco dei docenti che hanno lezione a una determinata ora</span>
+<span class="sd">    di un determinato giorno della settimana </span>
+
+<span class="sd">    Primo parametro   - accetta in ingresso il percorso del file da analizzare</span>
+<span class="sd">    Secondo parametro - accetta in ingresso un&#39;ora</span>
+<span class="sd">    Terzo parametro   - accetta in ingresso un giorno</span>
+<span class="sd">	Quarto parametro   - accetta in ingresso il percorso del file in cui scrivere l&#39;elaborazione</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file_orario</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Errore: file inesistente</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">elenco_docenti</span> <span class="o">=</span> <span class="p">[]</span>
+        
+        <span class="n">orario</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_orario</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+        <span class="n">file_output_aperto</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_output</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+        <span class="n">orario</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span> <span class="c1">#Lettura della prima riga di intestazione</span>
+        <span class="n">orario</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span> <span class="c1">#Lettura della seconda riga di intestazione</span>
+        
+        <span class="n">riga</span> <span class="o">=</span> <span class="n">orario</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#Lettura del primo docente</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">riga</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+            <span class="n">riga</span> <span class="o">=</span> <span class="n">riga</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">SEPARATORE</span><span class="p">)</span>
+            <span class="n">posizione</span> <span class="o">=</span> <span class="n">GIORNI_SET</span><span class="p">[</span><span class="n">giorno</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()]</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">ora</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">riga</span><span class="p">[</span><span class="n">posizione</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;   &quot;</span><span class="p">):</span>
+                <span class="n">elenco_docenti</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">riga</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+            <span class="n">riga</span> <span class="o">=</span> <span class="n">orario</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#Lettura della riga successiva</span>
+            
+        <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">elenco_docenti</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Nessun docente ha lezione alla &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ora</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;ª ora del &quot;</span> <span class="o">+</span> <span class="n">giorno</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1">#scrittura nel file dei docenti</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">elenco_docenti</span><span class="p">)):</span>
+                <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">elenco_docenti</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        <span class="n">file_output_aperto</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">orario</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Magnani Mattia - Tosi Mirko.</p>
+  </div>
+
+  Realizzato con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornito da <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

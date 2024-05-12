@@ -1,0 +1,49 @@
+Pacchetto Funzioni
+==================
+
+
+Documentazione Funzioni Generazione Menù
+-----------------------------------------
+
+.. automodule:: moduli.FunzioniMenu
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Documentazione Funzioni ChiediDati
+----------------------------------
+
+.. automodule:: moduli.ChiediDati
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Documentazione Funzioni Orario
+-------------------------------
+
+.. automodule:: moduli.FunzioniOrario
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Impostazioni programma
+-------------------------------
+
+.. automodule:: moduli.ImpostazioniDoc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+
+
+
+Module contenuti
+----------------
+
+
+.. automodule:: moduli
+   :members:
+   :undoc-members:
+   :show-inheritance:

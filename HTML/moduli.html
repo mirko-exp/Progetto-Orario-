@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="it" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacchetto Funzioni &mdash; Orario Docenti 0.1 documentazione</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/fonts.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=41f723b1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=0173e136"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Indice" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="prev" title="main module" href="main.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Orario Docenti
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Cerca documenti" aria-label="Cerca documenti" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">SPHINX</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Pacchetto Funzioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-moduli.FunzioniMenu">Documentazione Funzioni Generazione Menù</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#moduli.FunzioniMenu.MINMENU"><code class="docutils literal notranslate"><span class="pre">MINMENU</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#moduli.FunzioniMenu.creaVocimenu"><code class="docutils literal notranslate"><span class="pre">creaVocimenu()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#moduli.FunzioniMenu.intero"><code class="docutils literal notranslate"><span class="pre">intero()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#moduli.FunzioniMenu.menu"><code class="docutils literal notranslate"><span class="pre">menu()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-moduli.ChiediDati">Documentazione Funzioni ChiediDati</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#moduli.ChiediDati.chiediIntero"><code class="docutils literal notranslate"><span class="pre">chiediIntero()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#moduli.ChiediDati.chiediStringa"><code class="docutils literal notranslate"><span class="pre">chiediStringa()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-moduli.FunzioniOrario">Documentazione Funzioni Orario</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#moduli.FunzioniOrario.conta_ore"><code class="docutils literal notranslate"><span class="pre">conta_ore()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#moduli.FunzioniOrario.docenti_classe"><code class="docutils literal notranslate"><span class="pre">docenti_classe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#moduli.FunzioniOrario.orario_docente"><code class="docutils literal notranslate"><span class="pre">orario_docente()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#moduli.FunzioniOrario.ore_diposizione"><code class="docutils literal notranslate"><span class="pre">ore_diposizione()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#moduli.FunzioniOrario.ore_disponibile"><code class="docutils literal notranslate"><span class="pre">ore_disponibile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-moduli.ImpostazioniDoc">Impostazioni programma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-moduli">Module contenuti</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu navigazione dispositivi mobili" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Orario Docenti</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Naviga tra le pagine">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">SPHINX</a></li>
+      <li class="breadcrumb-item active">Pacchetto Funzioni</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/moduli.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pacchetto-funzioni">
+<h1>Pacchetto Funzioni<a class="headerlink" href="#pacchetto-funzioni" title="Link to this heading"></a></h1>
+<section id="module-moduli.FunzioniMenu">
+<span id="documentazione-funzioni-generazione-menu"></span><h2>Documentazione Funzioni Generazione Menù<a class="headerlink" href="#module-moduli.FunzioniMenu" title="Link to this heading"></a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="moduli.FunzioniMenu.MINMENU">
+<span class="sig-prename descclassname"><span class="pre">moduli.FunzioniMenu.</span></span><span class="sig-name descname"><span class="pre">MINMENU</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#moduli.FunzioniMenu.MINMENU" title="Link to this definition"></a></dt>
+<dd><p>calcola l’indice dell’ultima voce di menù</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="moduli.FunzioniMenu.creaVocimenu">
+<span class="sig-prename descclassname"><span class="pre">moduli.FunzioniMenu.</span></span><span class="sig-name descname"><span class="pre">creaVocimenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tup</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moduli/FunzioniMenu.html#creaVocimenu"><span class="viewcode-link"><span class="pre">[sorgente]</span></span></a><a class="headerlink" href="#moduli.FunzioniMenu.creaVocimenu" title="Link to this definition"></a></dt>
+<dd><p>Funzione che genera le voci di menù originate dalla tupla di stringhe in ingresso
+la sequenza contiene tutte le voci diverse da «&lt;Inattiva&gt;»</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="moduli.FunzioniMenu.intero">
+<span class="sig-prename descclassname"><span class="pre">moduli.FunzioniMenu.</span></span><span class="sig-name descname"><span class="pre">intero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stringa</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moduli/FunzioniMenu.html#intero"><span class="viewcode-link"><span class="pre">[sorgente]</span></span></a><a class="headerlink" href="#moduli.FunzioniMenu.intero" title="Link to this definition"></a></dt>
+<dd><p>restituisce True se il parametro in ingresso ?n numero intero</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="moduli.FunzioniMenu.menu">
+<span class="sig-prename descclassname"><span class="pre">moduli.FunzioniMenu.</span></span><span class="sig-name descname"><span class="pre">menu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tup</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moduli/FunzioniMenu.html#menu"><span class="viewcode-link"><span class="pre">[sorgente]</span></span></a><a class="headerlink" href="#moduli.FunzioniMenu.menu" title="Link to this definition"></a></dt>
+<dd><p>funzione che stampa un menù con le voci generate da CreaVociMenu()</p>
+</dd></dl>
+
+</section>
+<section id="module-moduli.ChiediDati">
+<span id="documentazione-funzioni-chiedidati"></span><h2>Documentazione Funzioni ChiediDati<a class="headerlink" href="#module-moduli.ChiediDati" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="moduli.ChiediDati.chiediIntero">
+<span class="sig-prename descclassname"><span class="pre">moduli.ChiediDati.</span></span><span class="sig-name descname"><span class="pre">chiediIntero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">da</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1000000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000000000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moduli/ChiediDati.html#chiediIntero"><span class="viewcode-link"><span class="pre">[sorgente]</span></span></a><a class="headerlink" href="#moduli.ChiediDati.chiediIntero" title="Link to this definition"></a></dt>
+<dd><p>Chiede un intero in ingresso, stampando una frase di richiesta
+il numero deve essere strettamente compreso fra «da» e «a», scartando eventuali input errati</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="moduli.ChiediDati.chiediStringa">
+<span class="sig-prename descclassname"><span class="pre">moduli.ChiediDati.</span></span><span class="sig-name descname"><span class="pre">chiediStringa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moduli/ChiediDati.html#chiediStringa"><span class="viewcode-link"><span class="pre">[sorgente]</span></span></a><a class="headerlink" href="#moduli.ChiediDati.chiediStringa" title="Link to this definition"></a></dt>
+<dd><p>Chiede una stringa in ingresso, stampando una frase di richiesta</p>
+</dd></dl>
+
+</section>
+<section id="module-moduli.FunzioniOrario">
+<span id="documentazione-funzioni-orario"></span><h2>Documentazione Funzioni Orario<a class="headerlink" href="#module-moduli.FunzioniOrario" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="moduli.FunzioniOrario.conta_ore">
+<span class="sig-prename descclassname"><span class="pre">moduli.FunzioniOrario.</span></span><span class="sig-name descname"><span class="pre">conta_ore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">riga_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moduli/FunzioniOrario.html#conta_ore"><span class="viewcode-link"><span class="pre">[sorgente]</span></span></a><a class="headerlink" href="#moduli.FunzioniOrario.conta_ore" title="Link to this definition"></a></dt>
+<dd><p>Conta il numero di ore</p>
+<p>Primo parametro - accetta in ingresso una riga del file già separata, depurata e inserita in una lista</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="moduli.FunzioniOrario.docenti_classe">
+<span class="sig-prename descclassname"><span class="pre">moduli.FunzioniOrario.</span></span><span class="sig-name descname"><span class="pre">docenti_classe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_orario</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_output</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moduli/FunzioniOrario.html#docenti_classe"><span class="viewcode-link"><span class="pre">[sorgente]</span></span></a><a class="headerlink" href="#moduli.FunzioniOrario.docenti_classe" title="Link to this definition"></a></dt>
+<dd><p>Scrive in un file l’elenco dei docenti di una data classe</p>
+<p>Primo parametro   - accetta in ingresso il percorso del file da analizzare<br>
+Secondo parametro - accetta in ingresso una classe dell’orario <br>
+Terzo parametro   - accetta in ingresso il percorso del file in cui scrivere l’elaborazione</p>
+<blockquote>
+<div><p></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="moduli.FunzioniOrario.orario_docente">
+<span class="sig-prename descclassname"><span class="pre">moduli.FunzioniOrario.</span></span><span class="sig-name descname"><span class="pre">orario_docente</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_orario</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docente</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_output</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moduli/FunzioniOrario.html#orario_docente"><span class="viewcode-link"><span class="pre">[sorgente]</span></span></a><a class="headerlink" href="#moduli.FunzioniOrario.orario_docente" title="Link to this definition"></a></dt>
+<dd><p>Scrive in un file l’orario di un determinato docente e numero totale delle ore del docente</p>
+<p>Primo parametro   - accetta in ingresso il percorso del file da analizzare<br>
+Secondo parametro - accetta in ingresso un docente dell’orario<br>
+Terzo parametro   - accetta in ingresso il percorso del file in cui scrivere l’elaborazion</p>
+<blockquote>
+<div><p></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="moduli.FunzioniOrario.ore_diposizione">
+<span class="sig-prename descclassname"><span class="pre">moduli.FunzioniOrario.</span></span><span class="sig-name descname"><span class="pre">ore_diposizione</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_orario</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docente</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_output</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moduli/FunzioniOrario.html#ore_diposizione"><span class="viewcode-link"><span class="pre">[sorgente]</span></span></a><a class="headerlink" href="#moduli.FunzioniOrario.ore_diposizione" title="Link to this definition"></a></dt>
+<dd><p>Scrive in un file le ore a disposizione di un determinato docente</p>
+<p>Primo parametro   - accetta in ingresso il percorso del file da analizzare<br>
+Secondo parametro - accetta in ingresso un docente dell’orario <br>
+Terzo parametro   - accetta in ingresso il percorso del file in cui scrivere l’elaborazione</p>
+<blockquote>
+<div><p></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="moduli.FunzioniOrario.ore_disponibile">
+<span class="sig-prename descclassname"><span class="pre">moduli.FunzioniOrario.</span></span><span class="sig-name descname"><span class="pre">ore_disponibile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_orario</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ora</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">giorno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_output</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/moduli/FunzioniOrario.html#ore_disponibile"><span class="viewcode-link"><span class="pre">[sorgente]</span></span></a><a class="headerlink" href="#moduli.FunzioniOrario.ore_disponibile" title="Link to this definition"></a></dt>
+<dd><p>Scrive in un file l’elenco dei docenti che hanno lezione a una determinata ora
+di un determinato giorno della settimana</p>
+<p>Primo parametro   - accetta in ingresso il percorso del file da analizzare<br>
+Secondo parametro - accetta in ingresso un’ora<br>
+Terzo parametro   - accetta in ingresso un giorno<br>
+Quarto parametro   - accetta in ingresso il percorso del file in cui scrivere l’elaborazione</p>
+<blockquote>
+<div><p></p>
+</div></blockquote>
+</dd></dl>
+
+</section>
+<section id="module-moduli.ImpostazioniDoc">
+<span id="impostazioni-programma"></span><h2>Impostazioni programma<a class="headerlink" href="#module-moduli.ImpostazioniDoc" title="Link to this heading"></a></h2>
+<p>#COSTANTI UTILIZZATE NELLE FUNZIONI<br>
+SEPARATORE = «,» <br>
+RICEVIMENTO = «R»<br>
+DISPOSIZIONE = «D»<br>
+SETTIMANA = [» / «, » Lun «, » Mar «, » Mer «, » Gio «, » Ven «]<br>
+ORE = [» 1 «, » 2 «, » 3 «, » 4 «, » 5 «, » 6 «, » 7 «, » 8 «]<br>
+GIORNI_SET = {«Lunedì» : 0, «Martedì» : 8, «Mercoledì» : 16, «Giovedì» : 24, «Venerdì» : 32} #Dizionario per accedere all’ora corretta nella riga letta<br>
+TERMINATORE = «!!!»<br>
+MENU =(«uscire dal menù», «ottenere l’elenco dei docenti di una data classe», «ottenere l’orario di un determinato docente e numero totale delle ore del docente», «ottenere il numero di ore a disposizione di un determinato docente», «ottenere elenco dei docenti che hanno lezione una determinata ora di un determinato giorno della settimana», «&lt;Inattiva&gt;», «&lt;Inattiva&gt;», «&lt;Inattiva&gt;»)</p>
+<p>#COSTANTI UTILIZZATE NEL MODULO FunzioniMenu<br>
+PREMESSAGGIO = «Digitare »<br>
+MIDMESSAGGIO = » per »<br>
+INATTIVA = «&lt;Inattiva&gt;»</p>
+<p># COSTANTI UTILIZZATE NEL MODULO ChiediDati<br>
+INTERO_IMPOSSIBILE = 1000000000<br></p>
+</section>
+<section id="module-moduli">
+<span id="module-contenuti"></span><h2>Module contenuti<a class="headerlink" href="#module-moduli" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
+        <a href="main.html" class="btn btn-neutral float-left" title="main module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Magnani Mattia - Tosi Mirko.</p>
+  </div>
+
+  Realizzato con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornito da <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
